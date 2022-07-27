@@ -1,0 +1,28 @@
+{
+  "name": "express-sql-demo",
+  "version": "1.0.0",
+  "description": "Demonstration of how to utilize SQL in the Express framework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FluxOfPingIntegers/express-sql-demo.git"
+  },
+  "author": "Ryan Schleck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FluxOfPingIntegers/express-sql-demo/issues"
+  },
+  "homepage": "https://github.com/FluxOfPingIntegers/express-sql-demo#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19",
+    "pug": "^3.0.2"
+  }
+}
