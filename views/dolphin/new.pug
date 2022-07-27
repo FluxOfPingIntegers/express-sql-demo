@@ -1,0 +1,34 @@
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle}
+        link(rel="stylesheet", href="/css/main.css")
+    body
+        .dolphin-container 
+            form(action="/dolphins/create", method="POST") 
+                label(for="name") Enter Dolphins Name
+                input(type="text", name="name")
+                label(for="age") Enter Dolphins Age
+                input(type="number", name="age")
+                label(for="mood") What's This Dolphins Mood?
+                input(type="text", name="mood")
+                input(type="submit")
+            
+        //- CREATES THE FOLLOWING HTML
+            <body>
+              <div class="dolphin-container">
+                <form action="/dolphins/create" method="POST">
+                  <label for="name">Enter Dolphins Name</label>
+                  <input type="text" name="name">
+                  <label for="age">Enter Dolphins Age</label>
+                  <input type="number" name="age">
+                  <label for="mood">What's This Dolphins Mood?</label>
+                  <input type="text" name="mood">
+                  <input type="submit">
+                </form>
+              </div>
+            </body>
