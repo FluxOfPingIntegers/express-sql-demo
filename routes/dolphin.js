@@ -2,18 +2,20 @@ const path = require('path');
 
 const express = require('express');
 
-// todo
+// importing our dolphin middleware
 const dolphinController = require('../controllers/dolphin');
 
+// creating router object
 const router = express.Router();
 
-// todo
+// /dolphins/new => GET
 router.get('/new', dolphinController.getNewDolphin);
 
-// todo
+// /dolphins/ => GET
 router.get('/', dolphinController.getDolphins);
 
-// todo
+// /dolphins/create => POST
 router.post('/create', dolphinController.postCreateDolphin);
 
+// exporting router object containing our controller actions
 module.exports = router;

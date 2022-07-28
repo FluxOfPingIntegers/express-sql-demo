@@ -18,7 +18,7 @@ app.set('view engine', 'pug');
 // telling express where to find our templates.  This IS views by default
 app.set('views', 'views');
 
-// todo 
+// importing our dolphin routes & middleware functions
 const dolphinRoutes = require('./routes/dolphin');
 
 // allowing user submitted data to be available in the request object
@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // allows our html files to search within the public folder for links & scripts
 app.use(express.static(path.join(__dirname, 'public')));
 
-// todo
+// using our dolphin middleware functions to handle http requests beginning with '/dolphins'
 app.use('/dolphins', dolphinRoutes);
 
 // this middleware function will catch all non-defined routes
