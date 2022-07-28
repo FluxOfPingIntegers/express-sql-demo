@@ -11,7 +11,7 @@ const password = process.env.CASUAL_PASS;
 const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
-  database: 'express-sql-demo',
+  database: 'express_sql_demo',
   password: password
 });
 

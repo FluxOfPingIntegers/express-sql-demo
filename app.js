@@ -19,7 +19,7 @@ app.set('view engine', 'pug');
 app.set('views', 'views');
 
 // todo 
-// const dolphinRoutes = require('./routes/dolphin');
+const dolphinRoutes = require('./routes/dolphin');
 
 // allowing user submitted data to be available in the request object
 app.use(bodyParser.urlencoded({extended: false}));
@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // todo
-// app.use('/dolphin', dolphinRoutes);
+app.use('/dolphins', dolphinRoutes);
 
 // this middleware function will catch all non-defined routes
 app.use(errorController.get404);

@@ -14,22 +14,24 @@ exports.postCreateDolphin = (req, res, next) => {
   const age = req.body.age;
   const mood = req.body.mood;
   // todo
-  Dolphin.create({
-    name: name,
-    age: age,
-    mood: mood
-  })
-    .then(result => console.log('*SPLASH*', result))
+  const dolphin = new Dolphin(null, name, age, mood);
+  dolphin.save()
+    .then(result => {
+      console.log('*SPLASH*', result);
+      return res.redirect('/dolphins');
+    })
     .catch(err => console.log(err));
 };
 
 exports.getDolphins = (req, res, next) => {
   // todo
-  Dolphin.fetchAll(dolphins => {
-    res.render('dolphin/index', {
-      dolphins: dolphins,
-      pageTitle: 'All Dolphins',
-      path: '/dolphins'
+  Dolphin.fetchAll()
+    .then(dolphins => {
+      console.log(dolphins[0]);
+      res.render('dolphin/index', {
+        dolphins: dolphins[0],
+        pageTitle: 'All Dolphins',
+        path: 'dolphins'
+      });
     });
-  });
 };
