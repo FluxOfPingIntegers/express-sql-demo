@@ -1,4 +1,4 @@
-// implementing dotenv package to share contents of the .env file
+// importing dotenv package to share contents of the .env file
 require('dotenv').config();
 
 // middleware for interacting with mysql

@@ -25,7 +25,7 @@ exports.postCreateDolphin = (req, res, next) => {
 };
 
 exports.getDolphins = (req, res, next) => {
-  // this returns a promise hence we need our render in a then statement
+  // this returns a promise hence we need our render in a .then statement
   Dolphin.fetchAll()
     .then(dolphins => {
       console.log(dolphins[0]);
